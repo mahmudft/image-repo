@@ -6,6 +6,6 @@
 
 run commands at below
 
-pip install requirements
+pip install requirements.txt
 
 python manage.py runserver
