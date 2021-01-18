@@ -10,7 +10,7 @@ class UploadForm(forms.ModelForm):
 
     class Meta:
         model = Images
-        fields = ['file',]
+        fields = ['file', 'security']
 
 
 class SignUpForm(UserCreationForm):

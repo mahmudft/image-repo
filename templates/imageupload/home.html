@@ -1,4 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>List of Public images </h1>
+    <table>
+     <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">link</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for pic in data %}
+      <tr>
+       <td>{{ pic.file.name }}</td>
+       <td>{{ pic.file.url }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+    </table>
 {% endblock %}

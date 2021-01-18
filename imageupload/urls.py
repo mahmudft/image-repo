@@ -1,11 +1,11 @@
 from django.urls import path
 
-from imageupload import views
+from . import views
 
-urlpatetrns = [
+urlpatterns = [
     path('', views.home, name='home'),
     path('login/', views.log_in, name='login'),
     path('logout/', views.log_out, name='logout'),
-    path('filelist/', views.imagelist, name='imagelist'),
-    path('')
+    path('upload/', views.fileupload, name='upload'),
+    path('signup/', views.signup, name='signup')
 ]
