@@ -13,12 +13,12 @@ from imageupload.models import Images
 User = get_user_model()
 
 def home(request):
-    files = Images.objects.get(security="public")
+    files = Images.objects.filter(security="public").all()
     return render(request, 'imageupload/home.html', {'data': files})
 
 @login_required
 def fileupload(request):
-    upfiles = Images.objects.get(author=request.user)
+    upfiles = Images.objects.filter(author=request.user).all()
     if request.method == "POST":
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():

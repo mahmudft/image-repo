@@ -15,7 +15,7 @@
     </div>
     <form method="POST" class="form-group">
         {% csrf_token %}
-        {{ form|crispy }}
+        {{form|crispy}}
         <button class="btn btn-success">Sign up</button>
     </form>
     <div>If you have an account , <a href="{% url 'login' %}">Login</a></div>
